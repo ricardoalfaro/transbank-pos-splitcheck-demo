@@ -1,0 +1,28 @@
+body{
+  background-color: #008ead;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.pos{
+  width: 805px;
+  height: 1200px;
+  display: block;
+  background: url(../images/pos_base.png) no-repeat 0 center;
+  background-size: 100%;
+  position: relative;
+}
+
+.pos-screen{
+  width: 452px;
+  height: 280px;
+  background: #c8c7dc;
+  display: block;
+  position: absolute;
+  top: 242px;
+  left: 169px;
+  border: 6px solid #333;
+  border-radius: 10px;
+}
