@@ -1,4 +1,4 @@
-# transbank-pos-split-demo
+# transbank-pos-splitcheck-demo
 ## POS Split Check Prototype 
 
 Prototipo HTML Básico para mostrar la funcionalidad de división de cuenta.
