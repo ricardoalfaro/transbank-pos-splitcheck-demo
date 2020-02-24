@@ -12,3 +12,6 @@ Se puede correr un servidor local para visualizarlo por IP en otros dispositivos
 ```
 python -m SimpleHTTPServer 3000
 ```
+## Deploy
+El repositorio está vinculado a Netlify y se deploya cada vez que se pushea en master
+La URL para verlo es [https://transbank-pos-splitcheck-demo.netlify.com/](https://transbank-pos-splitcheck-demo.netlify.com/)  
