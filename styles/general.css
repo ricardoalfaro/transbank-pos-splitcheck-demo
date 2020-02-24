@@ -1,5 +1,8 @@
 body{
-  background-color: #008ead;
+  background: rgb(2,84,102);
+  background: -webkit-linear-gradient(rgba(2,84,102,1) 0%, rgba(0,142,173,1) 35%, rgba(0,212,255,1) 100%);
+  background: -o-linear-gradient(rgba(2,84,102,1) 0%, rgba(0,142,173,1) 35%, rgba(0,212,255,1) 100%);
+  background: linear-gradient(rgba(2,84,102,1) 0%, rgba(0,142,173,1) 35%, rgba(0,212,255,1) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
