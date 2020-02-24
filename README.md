@@ -9,4 +9,6 @@ Es un demo sin inteligencia, sólo muestra un camino, dividiendo la cuenta en 3 
 
 ## Server local
 Se puede correr un servidor local para visualizarlo por IP en otros dispositivos. Ej: Tablet.
+```
 python -m SimpleHTTPServer 3000
+```
