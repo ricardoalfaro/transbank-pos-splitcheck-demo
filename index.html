@@ -7,7 +7,44 @@
   </head>
   <body>
     <div class="pos">
-      <div class="pos-screen"></div>
+      <div class="pos-screen">
+        <img src="images/00.home.svg" alt="">
+      </div>
+      <div class="pos-keyboard">
+        <a href="#" id="pos-keyboard-key0a" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key01" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key02" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key03" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key04" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key05" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key06" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key07" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key08" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key09" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key0f" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key00" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key0z" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key_cancel" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key_back" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key_success" onclick="audio.play()"></a>
+      </div>
+      </div>
     </div>
+    <script>
+    var audio = new Audio("sounds/click.mp3" ) ;
+
+    audio.oncanplaythrough = function(){
+    audio.play();
+    audio.pause();
+    }
+
+    audio.loop = false;
+
+    audio.onended = function(){
+    audio.play();
+    audio.pause();
+    }
+
+    </script>
   </body>
 </html>
