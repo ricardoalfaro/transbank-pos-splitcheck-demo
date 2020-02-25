@@ -42,36 +42,107 @@
         sound_key.play();
       }
 
+      var sound_key2 = new Audio("sounds/credit-card.ogg");
+      function playAudio2() {
+        sound_key2.play();
+      }
+
       $(document).ready(function() {
         var state = 1;
         console.log(state);
+
+
+        $('#pos-keyboard-key03').on( "click", function() {
+          if(state === 1){
+            $('#my_image').attr('src','images/03.comercio.svg');
+            state = 3;
+            console.log(state);
+          }
+        });
+
+        $('#pos-keyboard-key04').on( "click", function() {
+          if(state === 3){
+            $('#my_image').attr('src','images/04.ventadividida-monto.svg');
+            state = 4;
+            console.log(state);
+          }
+        });
+
+        $('#pos-keyboard-key00').on( "click", function() {
+          if(state === 6){
+            $('#my_image').attr('src','images/04.ventadividida-payment-resume.svg');
+            state = 7;
+            console.log(state);
+          }
+        });
+
+        $('#pos-keyboard-key01').on( "click", function() {
+          if(state === 4){
+            $('#my_image').attr('src','images/04.ventadividida-monto-fill.svg');
+            state = 4;
+            console.log(state);
+          }else if(state === 8){
+            $('#my_image').attr('src','images/04.ventadividida-payment-credit.svg');
+            state = 9;
+            console.log(state);
+            playAudio2();
+            setTimeout(function(){
+              $('#my_image').attr('src','images/04.ventadividida-payment-credit-cuotas.svg');
+              state = 10;
+              console.log(state);
+            }, 3400);
+          }else if(state === 10){
+            $('#my_image').attr('src','images/04.ventadividida-payment-credit-pass.svg');
+            state = 11;
+            console.log(state);
+          }
+        });
+
+        $('#pos-keyboard-key05').on( "click", function() {
+          if(state === 5){
+            $('#my_image').attr('src','images/04.ventadividida-partes-fill.svg');
+            state = 5;
+            console.log(state);
+          }
+        });
+
+        $('#pos-keyboard-key_success').on( "click", function() {
+          if(state === 4){
+            $('#my_image').attr('src','images/04.ventadividida-partes-empty.svg');
+            state = 5;
+            console.log(state);
+          }else if(state === 5){
+            $('#my_image').attr('src','images/04.ventadividida-payment-resume-empty.svg');
+            state = 6;
+            console.log(state);
+          }else if(state === 7){
+            $('#my_image').attr('src','images/04.ventadividida-payment.svg');
+            state = 8;
+            console.log(state);
+          }
+        });
+
+        $('#pos-keyboard-key_back').on( "click", function() {
+          if(state === 5){
+            $('#my_image').attr('src','images/04.ventadividida-partes-fill.svg');
+            state = 6;
+            console.log(state);
+          }else if(state === 6){
+            $('#my_image').attr('src','images/04.ventadividida-payment-resume.svg');
+            state = 5;
+            console.log(state);
+          }else if(state === 7){
+            $('#my_image').attr('src','images/04.ventadividida-payment-resume.svg');
+            state = 5;
+            console.log(state);
+          }
+        });
 
         $('#pos-keyboard-key_cancel').on( "click", function() {
           $('#my_image').attr('src','images/00.home.svg');
           state = 1;
           console.log(state);
         });
-
-        $('#pos-keyboard-key03').on( "click", function() {
-          $('#my_image').attr('src','images/03.comercio.svg');
-          state = 3;
-          console.log(state);
-        });
-
-        $('#pos-keyboard-key04').on( "click", function() {
-          $('#my_image').attr('src','images/04.ventadividida-monto.svg');
-          state = 4;
-          console.log(state);
-        });
-
-
-        if(state === 1){
-          
-        }
-
-        if(state === 4){
-          
-        }
 
       });
       
