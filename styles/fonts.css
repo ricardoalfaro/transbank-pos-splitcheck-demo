@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LED Calculator';
+    src: url('../fonts/LEDCalculator.woff2') format('woff2'),
+        url('../fonts/LEDCalculator.woff') format('woff'),
+        url('../fonts/LEDCalculator.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+

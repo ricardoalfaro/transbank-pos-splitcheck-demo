@@ -32,6 +32,14 @@ body{
   overflow: hidden;
 }
 
+.pos-mount{
+  position: absolute;
+  z-index: 2;
+  font-family: 'LED Calculator';
+  font-size: 50px;
+  font-weight: 100;
+}
+
 .pos-screen img{
   width: 100%;
   mix-blend-mode: multiply;

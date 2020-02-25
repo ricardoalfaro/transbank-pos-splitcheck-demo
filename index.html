@@ -3,48 +3,76 @@
   <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/general.css">
+    <link rel="shortcut icon" href="favicon.ico" />
     <title>Transbank POS Demo</title>
   </head>
   <body>
     <div class="pos">
       <div class="pos-screen">
-        <img src="images/00.home.svg" alt="">
+        <div class="pos-mount">
+          $ 
+        </div>
+        <img id="my_image" src="images/00.home.svg" alt="POS Screen">
       </div>
       <div class="pos-keyboard">
-        <a href="#" id="pos-keyboard-key0a" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key01" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key02" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key03" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key04" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key05" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key06" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key07" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key08" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key09" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key0f" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key00" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key0z" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key_cancel" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key_back" onclick="audio.play()"></a>
-        <a href="#" id="pos-keyboard-key_success" onclick="audio.play()"></a>
+        <a href="#" id="pos-keyboard-key0a" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key01" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key02" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key03" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key04" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key05" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key06" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key07" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key08" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key09" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key0f" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key00" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key0z" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key_cancel" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key_back" onclick="playAudio()"></a>
+        <a href="#" id="pos-keyboard-key_success" onclick="playAudio()"></a>
       </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-    var audio = new Audio("sounds/click.mp3" ) ;
+      function playAudio(url) {
+        new Audio("sounds/click.mp3").play();
+      }
 
-    audio.oncanplaythrough = function(){
-    audio.play();
-    audio.pause();
-    }
+      $(document).ready(function() {
+        var state = 1;
+        console.log(state);
 
-    audio.loop = false;
+        $('#pos-keyboard-key_cancel').on( "click", function() {
+          $('#my_image').attr('src','images/00.home.svg');
+          state = 1;
+          console.log(state);
+        });
 
-    audio.onended = function(){
-    audio.play();
-    audio.pause();
-    }
+        $('#pos-keyboard-key03').on( "click", function() {
+          $('#my_image').attr('src','images/03.comercio.svg');
+          state = 3;
+          console.log(state);
+        });
 
+        $('#pos-keyboard-key04').on( "click", function() {
+          $('#my_image').attr('src','images/04.ventadividida-monto.svg');
+          state = 4;
+          console.log(state);
+        });
+
+
+        if(state === 1){
+          
+        }
+
+        if(state === 4){
+          
+        }
+
+      });
+      
     </script>
   </body>
 </html>
