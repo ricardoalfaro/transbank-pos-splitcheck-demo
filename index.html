@@ -36,8 +36,10 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      function playAudio(url) {
-        new Audio("sounds/click.mp3").play();
+      
+      var sound_key = new Audio("sounds/click.mp3");
+      function playAudio() {
+        sound_key.play();
       }
 
       $(document).ready(function() {
