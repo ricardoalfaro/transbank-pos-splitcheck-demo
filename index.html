@@ -9,11 +9,11 @@
   </head>
   <body>
     <div class="pos">
+      <div class="pos-ticket">
+        <img src="images/ticket.png" alt="POS Ticket">
+      </div>
       <div class="pos-screen">
-        <div class="pos-mount">
-        
-        </div>
-        <img id="pos_screen" src="images/00.home.svg" alt="POS Screen">
+        <img id="pos_screen" src="" alt="POS Screen">
       </div>
       <div class="pos-keyboard">
         <a href="#" id="pos-keyboard-key0a" onclick="playAudio()"></a>
@@ -48,10 +48,17 @@
         sound_key2.play();
       }
 
+      var sound_print = new Audio("sounds/ticket-print.ogg");
+      function playAudioPrint() {
+        sound_print.play();
+      }
+
+      //$('.pos-ticket img').addClass('print');
+
       $(document).ready(function() {
         var state = 1;
         console.log(state);
-
+        $('#pos_screen').attr('src','images/00.home.svg');
         $('#pos-keyboard-key01').on( "click", function() {
           if(state === 4){
             $('#pos_screen').attr('src','images/04.ventadividida-monto-fill.svg');
@@ -433,6 +440,8 @@
               playAudio2();
               setTimeout(function(){
                 $('#pos_screen').attr('src','images/04.ventadividida-payment-credit-aproved.svg');
+                $('.pos-ticket img').addClass('print');
+                playAudioPrint();
                 state = 19;
                 console.log(state);
                 setTimeout(function(){
@@ -479,7 +488,9 @@
               $('#pos_screen').attr('src','images/00.home.svg');
               state = 1;
               console.log(state);
+              playAudio();
             }, 3400);
+            clearTimeout();
           };
         });
 

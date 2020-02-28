@@ -32,6 +32,57 @@ body{
   overflow: hidden;
 }
 
+.pos-screen img{
+  width: 100%;
+  mix-blend-mode: multiply;
+}
+
+.pos-ticket{
+  position: absolute;
+  z-index: 0;
+  width: 440px;
+  top: -276px;
+  left: 170px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.pos-ticket img{
+  width: 100%;
+  position: absolute;
+  top: 380px;
+  z-index: 2;
+}
+
+.pos-ticket img.print { 
+  animation: print_ticket 10s ease 0s 1 normal forwards;
+}
+
+@keyframes print_ticket{
+  from {
+    top: 380px;
+  } 
+  to{
+    top:-265px;
+  } 
+}
+@-moz-keyframes print_ticket{
+  from {
+    top: 380px;
+  } 
+  to{
+    left:-265px;
+  } 
+}
+@-webkit-keyframes print_ticket{
+  from {
+    top: 380px;
+  } 
+  to{
+    top:-265px;
+  } 
+}​
+
 .pos-mount{
   position: absolute;
   z-index: 2;
@@ -40,10 +91,6 @@ body{
   font-weight: 100;
 }
 
-.pos-screen img{
-  width: 100%;
-  mix-blend-mode: multiply;
-}
 .pos-keyboard{
   width: 460px;
   height: 505px;
